@@ -1,614 +1,571 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'PingFang SC'; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s5 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s6 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s7 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s8 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s9 {font-kerning: none}
-    span.s10 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s11 {font: 14.0px 'PingFang SC'; font-kerning: none; background-color: #ecf1f7}
-    span.s12 {font: 14.0px 'PingFang SC'; font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s13 {font: 14.0px Menlo; font-kerning: none; background-color: #ecf1f7}
-    span.s14 {font: 14.0px Menlo; font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s15 {font: 14.0px Menlo; font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s16 {font: 14.0px 'Apple Color Emoji'; font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s17 {font-kerning: none; color: #4d5055; background-color: #ecf1f7; -webkit-text-stroke: 0px #4d5055}
-    span.s18 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s19 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
-    span.s20 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Portfolio | UI/UX & Digital Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --bg-dark: #050505;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e5e5e5;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* 头部容器锁定 */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* 画布仅在头部区域生效 */
+        #starfield-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* 极简玻璃 UI */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            padding: 6px;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            padding: 8px 20px;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s;
+            border-radius: 100px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(180deg, #ffffff 0%, #777777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 4px 14px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* 技能条 */
+        .skill-bar-bg {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background: #fff;
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
+        .header-content {
+            position: relative;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .header-content button, .header-content a {
+            pointer-events: auto;
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"zh-CN"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">Designer Portfolio | UI/UX &amp; Digital Artist</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">:root</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">--glass-bg:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.02</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">--glass-border:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.08</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">--bg-dark:</span><span class="s1"> </span><span class="s7">#050505</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s7">var(--bg-dark)</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s7">#e5e5e5</span><span class="s1">;</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s5"> </span><span class="s1">-apple-system</span><span class="s5">, </span><span class="s1">BlinkMacSystemFont</span><span class="s5">, </span><span class="s10">"SF Pro Display"</span><span class="s5">, </span><span class="s10">"Helvetica Neue"</span><span class="s5">, </span><span class="s1">Arial</span><span class="s5">, </span><span class="s1">sans-serif</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">overflow-x:</span><span class="s1"> </span><span class="s7">hidden</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">cursor:</span><span class="s1"> </span><span class="s7">default</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* </span><span class="s11">头部容器锁定</span><span class="s1"> */</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.hero-section</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s7">relative</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s8">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s8">100vh</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">overflow:</span><span class="s1"> </span><span class="s7">hidden</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">#000</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* </span><span class="s11">画布仅在头部区域生效</span><span class="s1"> */</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">#starfield-canvas</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s7">absolute</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">top:</span><span class="s1"> </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">left:</span><span class="s1"> </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s8">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s8">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">z-index:</span><span class="s1"> </span><span class="s8">1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* </span><span class="s11">极简玻璃</span><span class="s1"> UI */</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.glass-card</span><span class="s5"> {</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s5"> </span><span class="s1">var(--glass-bg)</span><span class="s5">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">backdrop-filter:</span><span class="s5"> </span><span class="s7">blur(</span><span class="s8">24px</span><span class="s7">)</span><span class="s5"> </span><span class="s7">saturate(</span><span class="s8">180%</span><span class="s7">)</span><span class="s5">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">-webkit-backdrop-filter:</span><span class="s5"> </span><span class="s7">blur(</span><span class="s8">24px</span><span class="s7">)</span><span class="s5"> </span><span class="s7">saturate(</span><span class="s8">180%</span><span class="s7">)</span><span class="s5">;</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s5"> </span><span class="s8">1px</span><span class="s5"> </span><span class="s1">solid</span><span class="s5"> </span><span class="s1">var(--glass-border)</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s8">28px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s7">all</span><span class="s1"> </span><span class="s8">0.6s</span><span class="s1"> </span><span class="s7">cubic-bezier(</span><span class="s8">0.16</span><span class="s1">, </span><span class="s8">1</span><span class="s1">, </span><span class="s8">0.3</span><span class="s1">, </span><span class="s8">1</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.glass-card:hover</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.05</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-color:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.15</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s7">translateY(</span><span class="s8">-8px</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s1"> </span><span class="s8">0</span><span class="s1"> </span><span class="s8">30px</span><span class="s1"> </span><span class="s8">60px</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">0</span><span class="s1">, </span><span class="s8">0</span><span class="s1">, </span><span class="s8">0</span><span class="s1">, </span><span class="s8">0.8</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">nav</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s7">fixed</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">top:</span><span class="s1"> </span><span class="s8">24px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">left:</span><span class="s1"> </span><span class="s8">50%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s7">translateX(</span><span class="s8">-50%</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">z-index:</span><span class="s1"> </span><span class="s8">100</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s8">6px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">10</span><span class="s1">, </span><span class="s8">10</span><span class="s1">, </span><span class="s8">10</span><span class="s1">, </span><span class="s8">0.7</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">backdrop-filter:</span><span class="s5"> </span><span class="s7">blur(</span><span class="s8">20px</span><span class="s7">)</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s8">100px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s1"> </span><span class="s8">1px</span><span class="s1"> </span><span class="s7">solid</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.1</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.nav-link</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s8">8px</span><span class="s1"> </span><span class="s8">20px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size:</span><span class="s1"> </span><span class="s8">13px</span><span class="s1">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">letter-spacing:</span><span class="s5"> </span><span class="s8">0.05em</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.4</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s7">all</span><span class="s1"> </span><span class="s8">0.3s</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s8">100px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.nav-link:hover</span><span class="s5">, </span><span class="s1">.nav-link.active</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s7">#fff</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.05</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.gradient-text</span><span class="s5"> {</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s5"> </span><span class="s1">linear-gradient(</span><span class="s8">180deg</span><span class="s5">, </span><span class="s1">#ffffff</span><span class="s5"> </span><span class="s8">0%</span><span class="s5">, </span><span class="s1">#777777</span><span class="s5"> </span><span class="s8">100%</span><span class="s1">)</span><span class="s5">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">-webkit-background-clip:</span><span class="s5"> </span><span class="s7">text</span><span class="s5">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">-webkit-text-fill-color:</span><span class="s5"> </span><span class="s7">transparent</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.tag</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size:</span><span class="s1"> </span><span class="s8">11px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s8">4px</span><span class="s1"> </span><span class="s8">14px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s8">100px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.03</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s1"> </span><span class="s8">1px</span><span class="s1"> </span><span class="s7">solid</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.08</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.6</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* </span><span class="s11">技能条</span><span class="s1"> */</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.skill-bar-bg</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s8">4px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">255</span><span class="s1">, </span><span class="s8">0.05</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s8">2px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">overflow:</span><span class="s1"> </span><span class="s7">hidden</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-top:</span><span class="s1"> </span><span class="s8">8px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.skill-bar-fill</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s8">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s7">#fff</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s1"> </span><span class="s7">width</span><span class="s1"> </span><span class="s8">1.5s</span><span class="s1"> </span><span class="s7">cubic-bezier(</span><span class="s8">0.16</span><span class="s1">, </span><span class="s8">1</span><span class="s1">, </span><span class="s8">0.3</span><span class="s1">, </span><span class="s8">1</span><span class="s7">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar</span><span class="s5"> { </span><span class="s2">width:</span><span class="s5"> </span><span class="s8">4px</span><span class="s5">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-thumb</span><span class="s5"> { </span><span class="s2">background:</span><span class="s5"> </span><span class="s7">rgba(</span><span class="s8">255</span><span class="s5">,</span><span class="s8">255</span><span class="s5">,</span><span class="s8">255</span><span class="s5">,</span><span class="s8">0.2</span><span class="s7">)</span><span class="s5">; </span><span class="s2">border-radius:</span><span class="s5"> </span><span class="s8">10px</span><span class="s5">; }</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.header-content</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s7">relative</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">z-index:</span><span class="s1"> </span><span class="s8">10</span><span class="s1">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">pointer-events:</span><span class="s5"> </span><span class="s7">none</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.header-content</span><span class="s5"> </span><span class="s1">button</span><span class="s5">, </span><span class="s1">.header-content</span><span class="s5"> </span><span class="s1">a</span><span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">pointer-events:</span><span class="s5"> </span><span class="s7">auto</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">nav</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link active"</span><span class="s3">&gt;</span><span class="s12">首页</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#about"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link"</span><span class="s3">&gt;</span><span class="s12">关于</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#works"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link"</span><span class="s3">&gt;</span><span class="s12">作品</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#contact"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link"</span><span class="s3">&gt;</span><span class="s12">联系</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">nav</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- </span><span class="s11">锁定头部背景区域</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hero-section"</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- </span><span class="s11">星空爆炸画布</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">canvas</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"starfield-canvas"</span><span class="s3">&gt;&lt;/</span><span class="s4">canvas</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">header</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-full flex flex-col justify-center items-center px-6 text-center header-content"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mb-8 inline-flex items-center space-x-2 px-5 py-2 glass-card rounded-full text-xs tracking-widest uppercase opacity-0"</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero-badge"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-2 h-2 rounded-full bg-white animate-pulse"</span><span class="s3">&gt;&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s11">视觉炼金术师</span><span class="s1"> &amp; </span><span class="s11">体验设计师</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-7xl md:text-9xl font-bold mb-10 tracking-tighter gradient-text leading-tight opacity-0"</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero-title"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Cosmic</span><span class="s3">&lt;</span><span class="s4">br</span><span class="s3">/&gt;</span><span class="s1">Vision.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg md:text-xl text-gray-500 max-w-2xl mb-14 font-light leading-relaxed opacity-0"</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero-desc"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s13"><span class="Apple-converted-space">                </span></span><span class="s1">在像素的星空中寻找秩序。点击屏幕释放灵感爆炸，</span><span class="s14">&lt;</span><span class="s15">br</span><span class="s14">/&gt;</span><span class="s1">让创意在黑暗宇宙中通过物理规则完美重组。</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 opacity-0"</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero-btns"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#works"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-10 py-4 bg-white text-black rounded-full font-semibold hover:scale-105 transition-transform text-center"</span><span class="s3">&gt;</span><span class="s12">探索作品集</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#about"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-10 py-4 glass-card font-semibold border-white/10 hover:border-white/30 transition-all text-center"</span><span class="s3">&gt;</span><span class="s12">了解更多</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">header</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- </span><span class="s11">个人简介模块</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"about"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-32 px-6 max-w-7xl mx-auto border-b border-white/5"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-12 gap-16"</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">左侧：基本信息与数据</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-4 space-y-12"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs uppercase tracking-[0.3em] text-gray-500 mb-6"</span><span class="s3">&gt;</span><span class="s5">Profile</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-medium mb-8"</span><span class="s3">&gt;</span><span class="s12">关于我</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 font-light leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s13"><span class="Apple-converted-space">                        </span></span><span class="s1">我是</span><span class="s13"> ALX</span><span class="s1">，一名跨领域的高级</span><span class="s13"> UI/UX </span><span class="s1">设计师。我致力于在复杂逻辑与纯粹美学之间寻找平衡点，为用户创造超越屏幕的感官体验。</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-2 gap-8 reveal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold block mb-1"</span><span class="s3">&gt;</span><span class="s5">8+</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-gray-600 uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s12">从业年限</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold block mb-1"</span><span class="s3">&gt;</span><span class="s5">120+</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-gray-600 uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s12">交付项目</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-6 reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm uppercase tracking-widest text-gray-500"</span><span class="s3">&gt;</span><span class="s12">核心能力</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"space-y-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between text-xs mb-1"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">UX Strategy</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">95%</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-bg"</span><span class="s3">&gt;&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-fill"</span><span class="s5"> </span><span class="s2">data-width</span><span class="s3">=</span><span class="s1">"95%"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between text-xs mb-1"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">Visual UI Design</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">90%</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-bg"</span><span class="s3">&gt;&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-fill"</span><span class="s5"> </span><span class="s2">data-width</span><span class="s3">=</span><span class="s1">"90%"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between text-xs mb-1"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">Motion Design</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1">85%</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-bg"</span><span class="s3">&gt;&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"skill-bar-fill"</span><span class="s5"> </span><span class="s2">data-width</span><span class="s3">=</span><span class="s1">"85%"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">右侧：详细简介</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-8 glass-card p-10 md:p-16 space-y-10 reveal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-light leading-snug"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span>“ </span><span class="s12">设计不仅是关于创造美丽的画面，更是关于</span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white font-normal underline underline-offset-8 decoration-white/20"</span><span class="s3">&gt;</span><span class="s12">解决复杂的人机连接问题</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s12">。</span><span class="s5"> ”</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 font-light text-lg leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s13"><span class="Apple-converted-space">                        </span></span><span class="s1">在过去的八年里，我的足迹遍布金融、汽车</span><span class="s13"> HMI</span><span class="s1">、能源管理及</span><span class="s13"> AIGC </span><span class="s1">领域。我参与过从</span><span class="s13"> 0 </span><span class="s1">到</span><span class="s13"> 1 </span><span class="s1">的初创品牌建立，也负责过数百万活跃用户量级的成熟产品迭代。我深信，好的设计应该像宇宙中的物理规则一样自然且不可忽视。</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-6 pt-10 border-t border-white/5"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm uppercase tracking-widest text-gray-500"</span><span class="s3">&gt;</span><span class="s12">曾服务于</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-wrap gap-x-12 gap-y-6 opacity-30 grayscale hover:grayscale-0 transition-all duration-500"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold italic tracking-tighter"</span><span class="s3">&gt;</span><span class="s5">TECH GIANT</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold italic tracking-tighter"</span><span class="s3">&gt;</span><span class="s5">NEBULA AI</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold italic tracking-tighter"</span><span class="s3">&gt;</span><span class="s5">CYBER MOTION</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold italic tracking-tighter"</span><span class="s3">&gt;</span><span class="s5">ECO FUTURE</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- </span><span class="s11">作品分类</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"works"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-32 px-6 max-w-7xl mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col md:flex-row justify-between items-start md:items-end mb-20 reveal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs uppercase tracking-[0.3em] text-gray-500 mb-4"</span><span class="s3">&gt;</span><span class="s5">Selected Works</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-medium tracking-tight"</span><span class="s3">&gt;</span><span class="s12">精选作品集</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-8 md:mt-0 flex flex-wrap gap-2"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s11">全部项目</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s11">车载</span><span class="s1">HMI</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s11">移动应用</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s11">数字孪生</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">AIGC</span><span class="s11">探索</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-2 gap-10"</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 1 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🚘</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">Horizon HMI 4.0</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2024</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">针对</span><span class="s1"> L4 </span><span class="s11">级自动驾驶设计的沉浸式驾驶座舱体验，重塑驾驶者与</span><span class="s1"> AI </span><span class="s11">的交互边界。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">HMI</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">3D Vision</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 2 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🌌</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s11">城市大脑数字孪生</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2023</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">超大规模城市运行数据实时可视化大屏，将海量数据转化为直观的视觉决策语言。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Data Viz</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Digital Twin</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 3 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">💳</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">Fintech Neo-Bank</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2023</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">为</span><span class="s1"> Z </span><span class="s11">世代设计的极简数字银行</span><span class="s1"> App</span><span class="s11">，通过微动效提升财务管理的趣味性与安全性。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Fintech</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Mobile App</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 4 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🧠</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">MindSpark AI Agent</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2024</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-400 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">下一代</span><span class="s1"> AI </span><span class="s11">助手界面设计，探索生成式交互（</span><span class="s1">Generative UI</span><span class="s11">）在办公场景的无限可能。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">AI/LLM</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Future UI</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 5 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🎧</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">Echo Audio Engine</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2022</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">专业级音频处理工具的桌面端</span><span class="s1"> UI</span><span class="s11">，强调复杂参数下的精细控制与视觉反馈。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">B-End</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">SaaS</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 6 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🔋</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s11">绿能分布式监控系统</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2022</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">工业级能源管理看板，将数万个传感点通过拓扑图进行高效、低延迟的视觉呈现。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">IoT</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Industrial</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 7 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🎨</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">CyberBrand Identity</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2023</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">为科技初创企业打造的动态品牌视觉系统，包含</span><span class="s1"> Logo </span><span class="s11">演绎及全套设计规范。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Branding</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Design System</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- </span><span class="s11">作品</span><span class="s1"> 8 --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"glass-card group overflow-hidden reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"</span><span class="s3">&gt;</span><span class="s16">🪐</span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between items-start mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">Stellar Meta-Space</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-[10px] px-2 py-1 border border-white/10 rounded"</span><span class="s3">&gt;</span><span class="s5">2024</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-gray-500 font-light text-sm mb-4"</span><span class="s3">&gt;</span><span class="s11">基于</span><span class="s1"> WebGL </span><span class="s11">的轻量级元宇宙空间交互设计，探索浏览器端的极致</span><span class="s1"> 3D </span><span class="s11">表现力。</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"flex gap-2"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">WebGL</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s1"> </span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"tag"</span><span class="s3">&gt;</span><span class="s1">Interactive</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- </span><span class="s11">底部激励句</span><span class="s1"> --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-40 px-6 text-center reveal"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">blockquote</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl md:text-5xl font-extralight italic text-white/80 max-w-4xl mx-auto leading-snug"</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s13"><span class="Apple-converted-space">            </span>“ </span><span class="s1">真正的设计，</span><span class="s14">&lt;</span><span class="s15">br</span><span class="s14">/&gt;</span><span class="s1">是让复杂的科技在星空中找到最优雅的秩序。</span><span class="s13"> ”</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s1">blockquote</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">footer</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"contact"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 px-6 border-t border-white/5 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-600 tracking-widest text-xs uppercase mb-4"</span><span class="s3">&gt;</span><span class="s5">&amp;copy; 2024 ALX DESIGN STUDIO</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center space-x-8 text-sm text-gray-400"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-white transition-colors"</span><span class="s3">&gt;</span><span class="s5">Dribbble</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-white transition-colors"</span><span class="s3">&gt;</span><span class="s5">Behance</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-white transition-colors"</span><span class="s3">&gt;</span><span class="s5">Instagram</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-white transition-colors"</span><span class="s3">&gt;</span><span class="s5">LinkedIn</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s17">/**</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">         </span>* </span><span class="s11">宇宙星空爆炸系统</span><span class="s1"> - </span><span class="s11">锁定头部区域</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">         </span>*/</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> canvas = document.getElementById(</span><span class="s10">'starfield-canvas'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> ctx = canvas.getContext(</span><span class="s10">'2d'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> container = document.querySelector(</span><span class="s10">'.hero-section'</span><span class="s1">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">let</span><span class="s1"> particles = [];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">let</span><span class="s1"> stars = [];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">let</span><span class="s1"> mouse = { x: -</span><span class="s19">100</span><span class="s1">, y: -</span><span class="s19">100</span><span class="s1"> };</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> particleCount = </span><span class="s19">200</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> shapes = {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>random: () =&gt; ({ x: </span><span class="s20">Math</span><span class="s1">.random() * canvas.width, y: </span><span class="s20">Math</span><span class="s1">.random() * canvas.height }),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>circle: (i) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> angle = (i / particleCount) * </span><span class="s20">Math</span><span class="s1">.</span><span class="s20">PI</span><span class="s1"> * </span><span class="s19">2</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> r = </span><span class="s20">Math</span><span class="s1">.min(canvas.width, canvas.height) * </span><span class="s19">0.28</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">return</span><span class="s1"> { x: canvas.width/</span><span class="s19">2</span><span class="s1"> + </span><span class="s20">Math</span><span class="s1">.cos(angle) * r, y: canvas.height/</span><span class="s19">2</span><span class="s1"> + </span><span class="s20">Math</span><span class="s1">.sin(angle) * r };</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>square: (i) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> side = particleCount / </span><span class="s19">4</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> r = </span><span class="s20">Math</span><span class="s1">.min(canvas.width, canvas.height) * </span><span class="s19">0.25</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">let</span><span class="s1"> x, y;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">if</span><span class="s1"> (i &lt; side) { x = -r + (i/side)*</span><span class="s19">2</span><span class="s1">*r; y = -r; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">else</span><span class="s1"> </span><span class="s18">if</span><span class="s1"> (i &lt; side*</span><span class="s19">2</span><span class="s1">) { x = r; y = -r + ((i-side)/side)*</span><span class="s19">2</span><span class="s1">*r; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">else</span><span class="s1"> </span><span class="s18">if</span><span class="s1"> (i &lt; side*</span><span class="s19">3</span><span class="s1">) { x = r - ((i-side*</span><span class="s19">2</span><span class="s1">)/side)*</span><span class="s19">2</span><span class="s1">*r; y = r; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">else</span><span class="s1"> { x = -r; y = r - ((i-side*</span><span class="s19">3</span><span class="s1">)/side)*</span><span class="s19">2</span><span class="s1">*r; }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">return</span><span class="s1"> { x: canvas.width/</span><span class="s19">2</span><span class="s1"> + x, y: canvas.height/</span><span class="s19">2</span><span class="s1"> + y };</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">let</span><span class="s1"> currentShapeMode = </span><span class="s10">'random'</span><span class="s1">;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">class</span><span class="s1"> </span><span class="s20">Particle</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">constructor</span><span class="s1">(i) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.index = i;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.reset();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>reset() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.x = </span><span class="s20">Math</span><span class="s1">.random() * canvas.width;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.y = </span><span class="s20">Math</span><span class="s1">.random() * canvas.height;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vx = (</span><span class="s20">Math</span><span class="s1">.random() - </span><span class="s19">0.5</span><span class="s1">) * </span><span class="s19">2</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vy = (</span><span class="s20">Math</span><span class="s1">.random() - </span><span class="s19">0.5</span><span class="s1">) * </span><span class="s19">2</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.accel = </span><span class="s19">0.04</span><span class="s1"> + </span><span class="s20">Math</span><span class="s1">.random() * </span><span class="s19">0.08</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.friction = </span><span class="s19">0.92</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.size = </span><span class="s20">Math</span><span class="s1">.random() * </span><span class="s19">2.5</span><span class="s1"> + </span><span class="s19">0.5</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.color = </span><span class="s10">`rgba(255, 255, 255, </span><span class="s1">${</span><span class="s20">Math</span><span class="s1">.random() * </span><span class="s19">0.6</span><span class="s1"> + </span><span class="s19">0.2</span><span class="s1">}</span><span class="s10">)`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>explode(mx, my) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> dx = </span><span class="s18">this</span><span class="s1">.x - mx;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> dy = </span><span class="s18">this</span><span class="s1">.y - my;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> dist = </span><span class="s20">Math</span><span class="s1">.sqrt(dx*dx + dy*dy);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">if</span><span class="s1"> (dist &lt; </span><span class="s19">500</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">const</span><span class="s1"> force = (</span><span class="s19">500</span><span class="s1"> - dist) / </span><span class="s19">500</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">const</span><span class="s1"> angle = </span><span class="s20">Math</span><span class="s1">.atan2(dy, dx);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">this</span><span class="s1">.vx += </span><span class="s20">Math</span><span class="s1">.cos(angle) * force * </span><span class="s19">45</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">this</span><span class="s1">.vy += </span><span class="s20">Math</span><span class="s1">.sin(angle) * force * </span><span class="s19">45</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>update() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">const</span><span class="s1"> target = shapes[currentShapeMode](</span><span class="s18">this</span><span class="s1">.index);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vx += (target.x - </span><span class="s18">this</span><span class="s1">.x) * </span><span class="s18">this</span><span class="s1">.accel * </span><span class="s19">0.1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vy += (target.y - </span><span class="s18">this</span><span class="s1">.y) * </span><span class="s18">this</span><span class="s1">.accel * </span><span class="s19">0.1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vx *= </span><span class="s18">this</span><span class="s1">.friction;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.vy *= </span><span class="s18">this</span><span class="s1">.friction;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.x += </span><span class="s18">this</span><span class="s1">.vx;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">this</span><span class="s1">.y += </span><span class="s18">this</span><span class="s1">.vy;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>draw() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.fillStyle = </span><span class="s18">this</span><span class="s1">.color;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.beginPath();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.arc(</span><span class="s18">this</span><span class="s1">.x, </span><span class="s18">this</span><span class="s1">.y, </span><span class="s18">this</span><span class="s1">.size, </span><span class="s19">0</span><span class="s1">, </span><span class="s20">Math</span><span class="s1">.</span><span class="s20">PI</span><span class="s1"> * </span><span class="s19">2</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.fill();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">if</span><span class="s1"> (</span><span class="s18">this</span><span class="s1">.size &gt; </span><span class="s19">2</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>ctx.shadowBlur = </span><span class="s19">10</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>ctx.shadowColor = </span><span class="s10">"white"</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>ctx.fill();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>ctx.shadowBlur = </span><span class="s19">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">function</span><span class="s1"> init() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>canvas.width = container.offsetWidth;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>canvas.height = container.offsetHeight;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>stars = [];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">for</span><span class="s1">(</span><span class="s18">let</span><span class="s1"> i=</span><span class="s19">0</span><span class="s1">; i&lt;</span><span class="s19">150</span><span class="s1">; i++) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>stars.push({</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>x: </span><span class="s20">Math</span><span class="s1">.random() * canvas.width,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>y: </span><span class="s20">Math</span><span class="s1">.random() * canvas.height,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>size: </span><span class="s20">Math</span><span class="s1">.random() * </span><span class="s19">1.2</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>opacity: </span><span class="s20">Math</span><span class="s1">.random() * </span><span class="s19">0.4</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>particles = [];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">for</span><span class="s1"> (</span><span class="s18">let</span><span class="s1"> i = </span><span class="s19">0</span><span class="s1">; i &lt; particleCount; i++) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>particles.push(</span><span class="s18">new</span><span class="s1"> </span><span class="s20">Particle</span><span class="s1">(i));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">function</span><span class="s1"> animate() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>ctx.fillStyle = </span><span class="s10">'rgba(0, 0, 0, 0.18)'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>ctx.fillRect(</span><span class="s19">0</span><span class="s1">, </span><span class="s19">0</span><span class="s1">, canvas.width, canvas.height);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>stars.forEach(s =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.fillStyle = </span><span class="s10">`rgba(255, 255, 255, </span><span class="s1">${s.opacity}</span><span class="s10">)`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.beginPath();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.arc(s.x, s.y, s.size, </span><span class="s19">0</span><span class="s1">, </span><span class="s20">Math</span><span class="s1">.</span><span class="s20">PI</span><span class="s1"> * </span><span class="s19">2</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>ctx.fill();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>particles.forEach(p =&gt; { p.update(); p.draw(); });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>ctx.lineWidth = </span><span class="s19">0.4</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">for</span><span class="s1"> (</span><span class="s18">let</span><span class="s1"> i = </span><span class="s19">0</span><span class="s1">; i &lt; particles.length; i++) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s18">for</span><span class="s1"> (</span><span class="s18">let</span><span class="s1"> j = i + </span><span class="s19">1</span><span class="s1">; j &lt; particles.length; j++) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">const</span><span class="s1"> dx = particles[i].x - particles[j].x;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">const</span><span class="s1"> dy = particles[i].y - particles[j].y;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">const</span><span class="s1"> dist = </span><span class="s20">Math</span><span class="s1">.sqrt(dx*dx + dy*dy);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s18">if</span><span class="s1"> (dist &lt; </span><span class="s19">75</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>ctx.strokeStyle = </span><span class="s10">`rgba(255, 255, 255, </span><span class="s1">${</span><span class="s19">0.12</span><span class="s1"> * (</span><span class="s19">1</span><span class="s1"> - dist/</span><span class="s19">75</span><span class="s1">)}</span><span class="s10">)`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>ctx.beginPath();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>ctx.moveTo(particles[i].x, particles[i].y);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>ctx.lineTo(particles[j].x, particles[j].y);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>ctx.stroke();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>requestAnimationFrame(animate);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>container.addEventListener(</span><span class="s10">'mousemove'</span><span class="s1">, (e) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> rect = canvas.getBoundingClientRect();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>mouse.x = e.clientX - rect.left;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>mouse.y = e.clientY - rect.top;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>container.addEventListener(</span><span class="s10">'mousedown'</span><span class="s1">, (e) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> rect = canvas.getBoundingClientRect();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> mx = e.clientX - rect.left;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> my = e.clientY - rect.top;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>particles.forEach(p =&gt; p.explode(mx, my));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> modes = [</span><span class="s10">'random'</span><span class="s1">, </span><span class="s10">'circle'</span><span class="s1">, </span><span class="s10">'square'</span><span class="s1">];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s18">const</span><span class="s1"> currentIndex = modes.indexOf(currentShapeMode);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>currentShapeMode = modes[(currentIndex + </span><span class="s19">1</span><span class="s1">) % modes.length];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>window.addEventListener(</span><span class="s10">'resize'</span><span class="s1">, init);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>init();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>animate();</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// </span><span class="s11">页面动效处理</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>gsap.registerPlugin(</span><span class="s20">ScrollTrigger</span><span class="s1">);</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// </span><span class="s11">头部进入动画</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s18">const</span><span class="s1"> tl = gsap.timeline();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>tl.to(</span><span class="s10">"#hero-badge"</span><span class="s1">, { opacity: </span><span class="s19">1</span><span class="s1">, y: </span><span class="s19">0</span><span class="s1">, duration: </span><span class="s19">1</span><span class="s1">, delay: </span><span class="s19">0.5</span><span class="s1"> })</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>.to(</span><span class="s10">"#hero-title"</span><span class="s1">, { opacity: </span><span class="s19">1</span><span class="s1">, y: </span><span class="s19">0</span><span class="s1">, duration: </span><span class="s19">1</span><span class="s1"> }, </span><span class="s10">"-=0.7"</span><span class="s1">)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>.to(</span><span class="s10">"#hero-desc"</span><span class="s1">, { opacity: </span><span class="s19">1</span><span class="s1">, y: </span><span class="s19">0</span><span class="s1">, duration: </span><span class="s19">1</span><span class="s1"> }, </span><span class="s10">"-=0.7"</span><span class="s1">)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>.to(</span><span class="s10">"#hero-btns"</span><span class="s1">, { opacity: </span><span class="s19">1</span><span class="s1">, y: </span><span class="s19">0</span><span class="s1">, duration: </span><span class="s19">1</span><span class="s1"> }, </span><span class="s10">"-=0.7"</span><span class="s1">);</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// </span><span class="s11">滚动揭示动画</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>gsap.utils.toArray(</span><span class="s10">'.reveal'</span><span class="s1">).forEach(elem =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>gsap.fromTo(elem,<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{ opacity: </span><span class="s19">0</span><span class="s1">, y: </span><span class="s19">50</span><span class="s1"> },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>opacity: </span><span class="s19">1</span><span class="s1">, y: </span><span class="s19">0</span><span class="s1">, duration: </span><span class="s19">1</span><span class="s1">, ease: </span><span class="s10">"power3.out"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>scrollTrigger: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>trigger: elem,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>start: </span><span class="s10">"top bottom-=100"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>toggleActions: </span><span class="s10">"play none none none"</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">// </span><span class="s11">技能条增长动画</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s20">ScrollTrigger</span><span class="s1">.create({</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>trigger: </span><span class="s10">"#about"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>start: </span><span class="s10">"top center"</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>onEnter: () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>document.querySelectorAll(</span><span class="s10">'.skill-bar-fill'</span><span class="s1">).forEach(bar =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>bar.style.width = bar.getAttribute(</span><span class="s10">'data-width'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+
+    <nav>
+        <div class="flex items-center">
+            <a href="#" class="nav-link active">首页</a>
+            <a href="#about" class="nav-link">关于</a>
+            <a href="#works" class="nav-link">作品</a>
+            <a href="#contact" class="nav-link">联系</a>
+        </div>
+    </nav>
+
+    <!-- 锁定头部背景区域 -->
+    <section class="hero-section">
+        <!-- 星空爆炸画布 -->
+        <canvas id="starfield-canvas"></canvas>
+
+        <header class="h-full flex flex-col justify-center items-center px-6 text-center header-content">
+            <div class="mb-8 inline-flex items-center space-x-2 px-5 py-2 glass-card rounded-full text-xs tracking-widest uppercase opacity-0" id="hero-badge">
+                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                <span>视觉炼金术师 & 体验设计师</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-9xl font-bold mb-10 tracking-tighter gradient-text leading-tight opacity-0" id="hero-title">
+                Cosmic<br/>Vision.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-500 max-w-2xl mb-14 font-light leading-relaxed opacity-0" id="hero-desc">
+                在像素的星空中寻找秩序。点击屏幕释放灵感爆炸，<br/>让创意在黑暗宇宙中通过物理规则完美重组。
+            </p>
+
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 opacity-0" id="hero-btns">
+                <a href="#works" class="px-10 py-4 bg-white text-black rounded-full font-semibold hover:scale-105 transition-transform text-center">探索作品集</a>
+                <a href="#about" class="px-10 py-4 glass-card font-semibold border-white/10 hover:border-white/30 transition-all text-center">了解更多</a>
+            </div>
+        </header>
+    </section>
+
+    <!-- 个人简介模块 -->
+    <section id="about" class="py-32 px-6 max-w-7xl mx-auto border-b border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- 左侧：基本信息与数据 -->
+            <div class="lg:col-span-4 space-y-12">
+                <div class="reveal">
+                    <h2 class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">Profile</h2>
+                    <h3 class="text-4xl font-medium mb-8">关于我</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        我是 ALX，一名跨领域的高级 UI/UX 设计师。我致力于在复杂逻辑与纯粹美学之间寻找平衡点，为用户创造超越屏幕的感官体验。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 reveal">
+                    <div>
+                        <span class="text-3xl font-bold block mb-1">8+</span>
+                        <span class="text-xs text-gray-600 uppercase tracking-widest">从业年限</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl font-bold block mb-1">120+</span>
+                        <span class="text-xs text-gray-600 uppercase tracking-widest">交付项目</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6 reveal">
+                    <h4 class="text-sm uppercase tracking-widest text-gray-500">核心能力</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>UX Strategy</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Visual UI Design</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Motion Design</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：详细简介 -->
+            <div class="lg:col-span-8 glass-card p-10 md:p-16 space-y-10 reveal">
+                <div class="space-y-6">
+                    <p class="text-2xl md:text-3xl font-light leading-snug">
+                        “ 设计不仅是关于创造美丽的画面，更是关于<span class="text-white font-normal underline underline-offset-8 decoration-white/20">解决复杂的人机连接问题</span>。 ”
+                    </p>
+                    <p class="text-gray-400 font-light text-lg leading-relaxed">
+                        在过去的八年里，我的足迹遍布金融、汽车 HMI、能源管理及 AIGC 领域。我参与过从 0 到 1 的初创品牌建立，也负责过数百万活跃用户量级的成熟产品迭代。我深信，好的设计应该像宇宙中的物理规则一样自然且不可忽视。
+                    </p>
+                </div>
+
+                <div class="space-y-6 pt-10 border-t border-white/5">
+                    <h4 class="text-sm uppercase tracking-widest text-gray-500">曾服务于</h4>
+                    <div class="flex flex-wrap gap-x-12 gap-y-6 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
+                        <span class="text-xl font-bold italic tracking-tighter">TECH GIANT</span>
+                        <span class="text-xl font-bold italic tracking-tighter">NEBULA AI</span>
+                        <span class="text-xl font-bold italic tracking-tighter">CYBER MOTION</span>
+                        <span class="text-xl font-bold italic tracking-tighter">ECO FUTURE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品分类 -->
+    <section id="works" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 reveal">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">Selected Works</h2>
+                <h3 class="text-5xl font-medium tracking-tight">精选作品集</h3>
+            </div>
+            <div class="mt-8 md:mt-0 flex flex-wrap gap-2">
+                <span class="tag">全部项目</span>
+                <span class="tag">车载HMI</span>
+                <span class="tag">移动应用</span>
+                <span class="tag">数字孪生</span>
+                <span class="tag">AIGC探索</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- 作品 1 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🚘</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Horizon HMI 4.0</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2024</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">针对 L4 级自动驾驶设计的沉浸式驾驶座舱体验，重塑驾驶者与 AI 的交互边界。</p>
+                    <div class="flex gap-2"><span class="tag">HMI</span> <span class="tag">3D Vision</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 2 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🌌</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">城市大脑数字孪生</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2023</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">超大规模城市运行数据实时可视化大屏，将海量数据转化为直观的视觉决策语言。</p>
+                    <div class="flex gap-2"><span class="tag">Data Viz</span> <span class="tag">Digital Twin</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 3 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">💳</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Fintech Neo-Bank</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2023</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">为 Z 世代设计的极简数字银行 App，通过微动效提升财务管理的趣味性与安全性。</p>
+                    <div class="flex gap-2"><span class="tag">Fintech</span> <span class="tag">Mobile App</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 4 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🧠</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">MindSpark AI Agent</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2024</span>
+                    </div>
+                    <p class="text-gray-400 font-light text-sm mb-4">下一代 AI 助手界面设计，探索生成式交互（Generative UI）在办公场景的无限可能。</p>
+                    <div class="flex gap-2"><span class="tag">AI/LLM</span> <span class="tag">Future UI</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 5 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🎧</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Echo Audio Engine</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2022</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">专业级音频处理工具的桌面端 UI，强调复杂参数下的精细控制与视觉反馈。</p>
+                    <div class="flex gap-2"><span class="tag">B-End</span> <span class="tag">SaaS</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 6 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🔋</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">绿能分布式监控系统</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2022</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">工业级能源管理看板，将数万个传感点通过拓扑图进行高效、低延迟的视觉呈现。</p>
+                    <div class="flex gap-2"><span class="tag">IoT</span> <span class="tag">Industrial</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 7 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🎨</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">CyberBrand Identity</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2023</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">为科技初创企业打造的动态品牌视觉系统，包含 Logo 演绎及全套设计规范。</p>
+                    <div class="flex gap-2"><span class="tag">Branding</span> <span class="tag">Design System</span></div>
+                </div>
+            </div>
+
+            <!-- 作品 8 -->
+            <div class="glass-card group overflow-hidden reveal">
+                <div class="aspect-video bg-[#0a0a0a] flex items-center justify-center text-6xl opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">🪐</div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Stellar Meta-Space</h4>
+                        <span class="text-[10px] px-2 py-1 border border-white/10 rounded">2024</span>
+                    </div>
+                    <p class="text-gray-500 font-light text-sm mb-4">基于 WebGL 的轻量级元宇宙空间交互设计，探索浏览器端的极致 3D 表现力。</p>
+                    <div class="flex gap-2"><span class="tag">WebGL</span> <span class="tag">Interactive</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部激励句 -->
+    <section class="py-40 px-6 text-center reveal">
+        <blockquote class="text-4xl md:text-5xl font-extralight italic text-white/80 max-w-4xl mx-auto leading-snug">
+            “ 真正的设计，<br/>是让复杂的科技在星空中找到最优雅的秩序。 ”
+        </blockquote>
+    </section>
+
+    <footer id="contact" class="py-20 px-6 border-t border-white/5 text-center">
+        <p class="text-gray-600 tracking-widest text-xs uppercase mb-4">&copy; 2024 ALX DESIGN STUDIO</p>
+        <div class="flex justify-center space-x-8 text-sm text-gray-400">
+            <a href="#" class="hover:text-white transition-colors">Dribbble</a>
+            <a href="#" class="hover:text-white transition-colors">Behance</a>
+            <a href="#" class="hover:text-white transition-colors">Instagram</a>
+            <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * 宇宙星空爆炸系统 - 锁定头部区域
+         */
+        const canvas = document.getElementById('starfield-canvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.querySelector('.hero-section');
+        
+        let particles = [];
+        let stars = [];
+        let mouse = { x: -100, y: -100 };
+        const particleCount = 200;
+        
+        const shapes = {
+            random: () => ({ x: Math.random() * canvas.width, y: Math.random() * canvas.height }),
+            circle: (i) => {
+                const angle = (i / particleCount) * Math.PI * 2;
+                const r = Math.min(canvas.width, canvas.height) * 0.28;
+                return { x: canvas.width/2 + Math.cos(angle) * r, y: canvas.height/2 + Math.sin(angle) * r };
+            },
+            square: (i) => {
+                const side = particleCount / 4;
+                const r = Math.min(canvas.width, canvas.height) * 0.25;
+                let x, y;
+                if (i < side) { x = -r + (i/side)*2*r; y = -r; }
+                else if (i < side*2) { x = r; y = -r + ((i-side)/side)*2*r; }
+                else if (i < side*3) { x = r - ((i-side*2)/side)*2*r; y = r; }
+                else { x = -r; y = r - ((i-side*3)/side)*2*r; }
+                return { x: canvas.width/2 + x, y: canvas.height/2 + y };
+            }
+        };
+
+        let currentShapeMode = 'random';
+
+        class Particle {
+            constructor(i) {
+                this.index = i;
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.accel = 0.04 + Math.random() * 0.08;
+                this.friction = 0.92;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.color = `rgba(255, 255, 255, ${Math.random() * 0.6 + 0.2})`;
+            }
+            explode(mx, my) {
+                const dx = this.x - mx;
+                const dy = this.y - my;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 500) {
+                    const force = (500 - dist) / 500;
+                    const angle = Math.atan2(dy, dx);
+                    this.vx += Math.cos(angle) * force * 45;
+                    this.vy += Math.sin(angle) * force * 45;
+                }
+            }
+            update() {
+                const target = shapes[currentShapeMode](this.index);
+                this.vx += (target.x - this.x) * this.accel * 0.1;
+                this.vy += (target.y - this.y) * this.accel * 0.1;
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+                this.x += this.vx;
+                this.y += this.vy;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                if (this.size > 2) {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = "white";
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+        }
+
+        function init() {
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
+            stars = [];
+            for(let i=0; i<150; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 1.2,
+                    opacity: Math.random() * 0.4
+                });
+            }
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle(i));
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.18)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(s => {
+                ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            particles.forEach(p => { p.update(); p.draw(); });
+            ctx.lineWidth = 0.4;
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 75) {
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.12 * (1 - dist/75)})`;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        container.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+            particles.forEach(p => p.explode(mx, my));
+            const modes = ['random', 'circle', 'square'];
+            const currentIndex = modes.indexOf(currentShapeMode);
+            currentShapeMode = modes[(currentIndex + 1) % modes.length];
+        });
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+
+        // 页面动效处理
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 头部进入动画
+        const tl = gsap.timeline();
+        tl.to("#hero-badge", { opacity: 1, y: 0, duration: 1, delay: 0.5 })
+          .to("#hero-title", { opacity: 1, y: 0, duration: 1 }, "-=0.7")
+          .to("#hero-desc", { opacity: 1, y: 0, duration: 1 }, "-=0.7")
+          .to("#hero-btns", { opacity: 1, y: 0, duration: 1 }, "-=0.7");
+
+        // 滚动揭示动画
+        gsap.utils.toArray('.reveal').forEach(elem => {
+            gsap.fromTo(elem, 
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 1, ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top bottom-=100",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        });
+
+        // 技能条增长动画
+        ScrollTrigger.create({
+            trigger: "#about",
+            start: "top center",
+            onEnter: () => {
+                document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-width');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
